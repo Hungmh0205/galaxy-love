@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày 20/10 ❤️</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.153.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.153.0/examples/jsm/"
+      }
+    }
+    </script>
+    <meta name="description" content="Chúc mừng ngày Phụ nữ Việt Nam 20/10 ❤️">
+    <meta property="og:title" content="Chúc Mừng Ngày 20/10 ❤️">
+    <meta property="og:description" content="Chúc một nửa thế giới luôn rạng ngời và hạnh phúc!">
+    <meta property="og:image" content="https://love.tsonit.com/love.jpg">
+    <meta property="og:url" content="https://love.tsonit.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://love.tsonit.com/love.png" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01QH0Y269"></script>
+    <script type="module" src="./script.js?v=2010_v4"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C01QH0Y269');
+    </script>
+    <style>
+        .text-white {
+            color: white !important;
+        }
+
+        .btn-audio-toggle {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .music-status {
+            display: flex;
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            z-index: 9999;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .music-status .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #a259f7;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        body.portrait-mode #landscape-warning {
+            display: flex;
+            opacity: 1;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #text {
+            position: fixed;
+            top: 4%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            z-index: 9999;
+            width: 90%;
+            max-width: 680px;
+            pointer-events: auto;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            font-family: 'Montserrat', 'Quicksand', sans-serif;
+            user-select: none;
+        }
+
+        #text.hidden {
+            opacity: 0;
+            transform: translate(-50%, -20px) scale(0.95);
+            pointer-events: none;
+        }
+
+        .mom-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.28), rgba(255, 215, 0, 0.22));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 192, 203, 0.5);
+            border-radius: 50px;
+            padding: 5px 18px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff0f5;
+            text-transform: uppercase;
+            box-shadow: 0 0 18px rgba(255, 105, 180, 0.35);
+            margin-bottom: 8px;
+            animation: pulseBadge 3s infinite ease-in-out;
+        }
+
+        .mom-title {
+            font-size: clamp(24px, 4.2vw, 38px);
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.25;
+            margin: 4px 0 8px;
+            background: linear-gradient(135deg, #ffffff 10%, #ffd1dc 45%, #ffd700 80%, #ff80bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 18px rgba(255, 105, 180, 0.7));
+            animation: glowPulse 2.5s infinite ease-in-out;
+        }
+
+        .mom-wish {
+            font-size: clamp(14px, 2.2vw, 17px);
+            font-weight: 500;
+            color: #fce4ec;
+            line-height: 1.5;
+            margin: 0 auto 14px;
+            text-shadow: 0 0 10px rgba(255, 180, 255, 0.6), 0 0 20px rgba(255, 105, 180, 0.4);
+            max-width: 580px;
+        }
+
+        .touch-action {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 18px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .touch-action:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .touch-text {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: 0 0 8px #ff69b4;
+        }
+
+        .arrow-icon {
+            font-size: 20px;
+            color: #ff69b4;
+            display: inline-block;
+            animation: arrowBounce 1.5s infinite ease-in-out;
+            filter: drop-shadow(0 0 8px #ff1493);
+        }
+
+        @keyframes pulseBadge {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 14px rgba(255, 105, 180, 0.35);
+            }
+
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 0 24px rgba(255, 215, 0, 0.55);
+            }
+        }
+
+        @keyframes glowPulse {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 14px rgba(255, 105, 180, 0.6));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 26px rgba(255, 215, 0, 0.8));
+            }
+        }
+
+        @keyframes arrowBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translateY(8px);
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="text">
+        <div class="mom-badge">🌸 20.10 — PHỤ NỮ VIỆT NAM 🌸</div>
+        <h1 class="mom-title">CHÚC MỪNG NGÀY 20/10</h1>
+        <p class="mom-wish">Chúc phái đẹp luôn rạng ngời, bình an & tràn ngập hạnh phúc ❤️</p>
+        <div class="touch-action">
+            <span class="touch-text">✨ Chạm vào tinh cầu để khám phá ✨</span>
+            <i class="fa-solid fa-angles-down arrow-icon"></i>
+        </div>
+    </div>
+
+    <div id="container"></div>
+
+    <div id="music-loader" class="music-status">
+        <div class="spinner"></div>
+        <span>Đang tải dữ liệu...</span>
+    </div>
+
+    <div id="landscape-warning">
+        <div class="warning-content">
+            <div class="rotate-icon"></div>
+            <h1>Vũ Trụ Của Mẹ</h1>
+            <p style="font-size: 0.6em;">Món quà bí mật</p>
+            <p style="font-size: 2em;">Mẹ hãy xoay ngang màn hình nha để thấy điều kỳ diệu!</p>
+            <p style="font-size: 1.4em;">Chúc mẹ 20.10 vui vẻ ^^❤️</p>
+            <div class="stars-bg"></div>
+        </div>
+    </div>
+    <div id="dark-overlay"></div>
+    <div id="warp-vignette"></div>
+    <div id="warp-flash"></div>
+    <div id="memory-flash"></div>
+    <div id="intro-sequence">
+        <div id="intro-wishes"></div>
+    </div>
+    <div id="cinematic-title">
+        <div class="title-main">Chúc mừng 20.10</div>
+        <div class="title-sub">Vũ Trụ Của Mẹ</div>
+    </div>
+    <div id="wish-panel" hidden>
+        <div class="wish-box">
+            <h3>Gửi một lời chúc đến mẹ</h3>
+            <p>Lời chúc của bạn sẽ hóa thành một vì sao bên mẹ</p>
+            <input id="wish-input" type="text" maxlength="60" placeholder="Con chúc mẹ...">
+            <div class="wish-actions">
+                <button id="wish-send">Gửi lời chúc</button>
+                <button id="wish-close">Để sau</button>
+            </div>
+        </div>
+    </div>
+    <div id="photo-lightbox" hidden>
+        <img alt="Ảnh kỷ niệm">
+    </div>
+    <div id="info">
+
+    </div>
+
+    <script>
+        window.dataLove2Loveloom = { "template": "galaxy", "data": { "keychain": { "name": "Mẹ yêu", "phone": "", "address": "" }, "ringTexts": ["Mừng ngày 20/10"], "heartImages": ["https:\/\/loveloom.click\/view\/2:AgACAgUAAyEGAASjr4jMAAKi2WhgEbJZNpxWZvYTk6gldWanHuC2AAJfyjEbzroBV_LF0kCGFvwVAQADAgADbQADNgQ.jpg"], "type_music": "system", "music_id": "musics\/ongbaanh.mp3", "backgroundMusic": "storage\/musics.mp3" } };
+    </script>
+    <script>
+        window.introWishes = (window.introWishes || []).concat([
+            // Thêm lời chúc của bạn ở đây, mỗi dòng là một chuỗi.
+            "Mẹ ơi!",
+            "Hôm nay, ngày 20.10",
+            "con không biết chúc gì hoa mỹ cả",
+            "chỉ muốn nói lời cảm ơn mẹ",
+            "Cảm ơn mẹ vì tất cả những vất vả, hy sinh thầm lặng mà mẹ đã dành cho con và gia đình suốt những năm qua",
+            "Con mong mẹ sẽ luôn khỏe mạnh, vui vẻ, hạnh phúc",
+            "và",
+            "Mong mẹ luôn yên tâm là con đang cố gắng từng ngày để mẹ không phải bận lòng nữa",
+            "Cảm ơn mẹ!",
+        ]);
+    </script>
+    <button id="snapshot-btn" class="text-white btn-audio-toggle"
+        style="position: absolute; top: 10px; right: 52px; z-index: 999;" title="Chụp lại khoảnh khắc">
+        <i class="text-white fa-solid fa-camera"></i>
+    </button>
+    <button id="toggle-audio" class="text-white btn-audio-toggle"
+        style="position: absolute; top: 10px; right: 10px; z-index: 999;">
+        <i id="audio-icon" class="text-white  fa-solid fa-volume-high"></i>
+    </button>
+
+    <script>
+        window.addEventListener('click', () => {
+            const hint = document.getElementById('text');
+            hint.classList.add('hidden');
+        });
+
+        // --- MODULE QUẢN LÝ ÂM THANH ---
+        const musicManager = {
+            // Properties
+            audio: null,
+            state: 'idle', // idle, loading, ready, playing, paused, muted, error
+            tokenData: null,
+
+            // --- Core Functions ---
+            _setupAudio() {
+                let audioSrc = window.dataLove2Loveloom?.data?.backgroundMusic;
+                if (!audioSrc) { // Nhạc dự phòng cuối cùng
+                    audioSrc = 'storage/musics.mp3';
+                }
+                this.audio = new Audio(audioSrc);
+                this.audio.loop = true;
+                this.audio.volume = 0.7;
+                this.attachEventListeners();
+                window.galaxyAudio = this.audio; // Gán vào global để script.js dùng
+                this.updateState('ready'); // Báo rằng nhạc đã sẵn sàng để phát
+            },
+
+            async init() {
+                const musicData = window.dataLove2Loveloom.data;
+                this.updateState('loading'); // Luôn bắt đầu với trạng thái loading
+
+                if (musicData.type_music === 'system') {
+                    this._setupAudio(); // Tạo audio ngay lập tức với nhạc hệ thống
+                } else if (musicData.type_music === 'zing' && musicData.music_id) {
+                    try {
+                        const res = await this.fetchWithAuth(`/get-song?id=${musicData.music_id}`);
+                        if (!res.ok) throw new Error('Response not OK');
+                        const songInfo = await res.json();
+                        const mp3Url = songInfo.stream?.['128'];
+
+                        if (mp3Url) {
+                            window.dataLove2Loveloom.data.backgroundMusic = mp3Url;
+                            this._setupAudio(); // Tạo audio sau khi lấy link Zing thành công
+                        } else {
+                            console.error('Không tìm thấy link MP3 128kbps, dùng nhạc dự phòng.');
+                            this._setupAudio(); // Lỗi -> Dùng nhạc dự phòng
+                        }
+                    } catch (error) {
+                        console.error('Lỗi khi lấy nhạc từ Zing:', error);
+                        this.updateState('error');
+                        this._setupAudio(); // Lỗi -> Dùng nhạc dự phòng
+                    }
+                } else {
+                    this._setupAudio(); // Trường hợp mặc định
+                }
+            },
+
+            play() {
+                // Hàm này giờ chỉ để script.js gọi, đảm bảo nhạc phát khi intro bắt đầu
+                if (this.audio && this.audio.paused) {
+                    // Trả về một Promise để bên ngoài có thể xử lý lỗi
+                    return this.audio.play();
+                }
+                // Nếu nhạc đã phát hoặc không tồn tại, trả về một Promise đã hoàn thành
+                return Promise.resolve();
+            },
+
+            // Hàm mới để bật/tắt nhạc từ nút điều khiển
+            togglePlayback() {
+                if (!this.audio || this.state === 'loading' || this.state === 'error') {
+                    console.warn("Nhạc chưa sẵn sàng hoặc đang lỗi.");
+                    return;
+                }
+
+                // Nếu nhạc đang bị tắt tiếng, ưu tiên bật tiếng trước
+                if (this.audio.muted) {
+                    this.audio.muted = false;
+                }
+
+                // Sau đó mới xử lý play/pause
+                if (this.audio.paused) {
+                    this.audio.play();
+                } else {
+                    this.audio.pause();
+                }
+            },
+
+
+            // --- UI & State Management ---
+            updateState(newState) {
+                this.state = newState;
+                // Chỉ ẩn loader khi không còn loading nữa
+                if (newState !== 'loading') {
+                    const loader = document.getElementById('music-loader');
+                    if (loader) loader.style.display = 'none';
+                }
+                this.updateUI();
+            },
+
+            updateUI() {
+                const audioIcon = document.getElementById('audio-icon');
+                if (!audioIcon) return;
+
+                // Cập nhật icon dựa trên trạng thái paused hoặc muted
+                if (!this.audio || this.audio.paused || this.audio.muted) {
+                    audioIcon.classList.remove("fa-volume-high");
+                    audioIcon.classList.add("fa-volume-xmark");
+                } else {
+                    audioIcon.classList.remove("fa-volume-xmark");
+                    audioIcon.classList.add("fa-volume-high");
+                }
+            },
+
+            attachEventListeners() {
+                if (!this.audio) return;
+                this.audio.onplay = () => this.updateState('playing');
+                this.audio.onpause = () => this.updateState('paused');
+                this.audio.onvolumechange = () => this.updateUI(); // Cập nhật UI nếu có thay đổi volume
+                this.audio.onerror = () => {
+                    console.error('Không tải được file nhạc:', this.audio?.currentSrc || '(không rõ nguồn)');
+                    this.updateState('error');
+                };
+            },
+
+            // Các hàm fetchWithAuth và getToken giữ nguyên...
+            async getToken() {
+                try {
+                    const res = await fetch('/token-api-mp3');
+                    if (!res.ok) throw new Error('Không lấy được token');
+                    const data = await res.json();
+                    this.tokenData = data;
+                    return this.tokenData;
+                } catch (err) {
+                    console.error('Lỗi lấy token:', err);
+                    return null;
+                }
+            },
+            async fetchWithAuth(url) {
+                await this.getToken();
+
+                if (!this.tokenData) throw new Error('Không có token xác thực');
+
+                const headers = {
+                    'X-Auth-Token': this.tokenData.token,
+                    'X-Auth-Timestamp': this.tokenData.timestamp,
+                    'X-Client-Key': this.tokenData.clientKey,
+                    'X-Auth-Nonce': this.tokenData.nonce,
+                };
+
+                let res = await fetch(url, {
+                    headers
+                });
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    console.error(`Lỗi response (${res.status}):`, errorText);
+                    if (res.status === 403) {
+                        await this.getToken();
+                        if (!this.tokenData) throw new Error('Không có token xác thực');
+
+                        const newHeaders = {
+                            'X-Auth-Token': this.tokenData.token,
+                            'X-Auth-Timestamp': this.tokenData.timestamp,
+                            'X-Client-Key': this.tokenData.clientKey,
+                            'X-Auth-Nonce': this.tokenData.nonce,
+                        };
+
+                        res = await fetch(url, {
+                            headers: newHeaders
+                        });
+
+                        if (!res.ok) {
+                            const errText = await res.text();
+                            throw new Error(`Request lỗi sau khi refresh token: ${res.status}`);
+                        }
+                    } else {
+                        throw new Error(`Request lỗi: ${res.status}`);
+                    }
+                }
+
+                return res;
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.musicManager = musicManager;
+            musicManager.init();
+
+            const toggleBtn = document.getElementById("toggle-audio");
+            toggleBtn.addEventListener("click", () => musicManager.togglePlayback());
+        });
+    </script>
+</body>
+
+</html>
