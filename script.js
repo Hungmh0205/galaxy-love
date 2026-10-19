@@ -236,12 +236,10 @@ const fallbackImages = [
 ];
 
 async function scanImagesFromFolder() {
-    let images = [];
-    const cfg = window.dataLove2Loveloom?.data?.heartImages;
-    if (Array.isArray(cfg)) {
-        const cfgImages = cfg.filter(src => typeof src === 'string' && src.length > 0);
-        images.push(...cfgImages);
-    }
+    // Ảnh local luôn được ưu tiên tìm đủ, kể cả khi config heartImages đã có ảnh remote.
+    // (Tránh trường hợp server static như Render không có directory listing ->
+    //  quét img/ fail -> chỉ còn 1 ảnh remote chết/CORS -> mất toàn bộ ảnh.)
+    let localImages = [];
     let scanned = [];
     // 1. Quét động danh mục máy chủ local (hỗ trợ Python http.server, VSCode Live Server, Apache, Nginx...)
     try {
@@ -261,30 +259,38 @@ async function scanImagesFromFolder() {
             }
         }
     } catch (e) {
-        // Fetch trực tiếp img/ không khả dụng
+        // Fetch trực tiếp img/ không khả dụng (server static không có directory listing)
     }
 
     if (scanned.length > 0) {
-        images = images.filter(src => !/^https?:/i.test(src));
-        images.push(...scanned);
-    } else if (images.length === 0) {
+        localImages = scanned;
+    } else {
         // 2. Tự động kiểm tra file manifest img/images.json nếu có
         try {
             const res = await fetch('img/images.json');
             if (res.ok) {
                 const data = await res.json();
                 if (Array.isArray(data) && data.length > 0) {
-                    images = data.map(item => item.startsWith('img/') ? item : 'img/' + item);
-                    console.log('Đọc danh sách ảnh từ img/images.json, tìm thấy:', images.length, 'ảnh');
+                    localImages = data.map(item => item.startsWith('img/') ? item : 'img/' + item);
+                    console.log('Đọc danh sách ảnh từ img/images.json, tìm thấy:', localImages.length, 'ảnh');
                 }
             }
         } catch (e) {}
 
         // 3. Fallback danh sách ảnh đã chuẩn bị sẵn
-        if (images.length === 0) {
-            images = fallbackImages;
+        if (localImages.length === 0) {
+            localImages = fallbackImages;
+            console.log('Dùng fallbackImages, tìm thấy:', localImages.length, 'ảnh');
         }
     }
+
+    // Ghép ảnh remote từ config (nếu có) + ảnh local
+    const images = [];
+    const cfg = window.dataLove2Loveloom?.data?.heartImages;
+    if (Array.isArray(cfg)) {
+        images.push(...cfg.filter(src => typeof src === 'string' && src.length > 0));
+    }
+    images.push(...localImages);
 
     // Loại bỏ phần tử trùng lặp
     return Array.from(new Set(images));
